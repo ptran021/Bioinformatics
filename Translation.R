@@ -1,7 +1,7 @@
 #### Get reverse/ complement or both
 seq <- c("ATGCATTGGACGTTAG")
 
-revComp <- function(x=seq, mode="C"){
+revComp <- function(x=seq, mode="RC"){
     replace <- NULL  
     for(i in seq(along=(x[]))){
       if(mode=="C") {
@@ -14,7 +14,7 @@ revComp <- function(x=seq, mode="C"){
         pasted <- paste(reverse, collapse="")
         
         if(mode=="RC")
-          replace<- chartr("ATGC", "TACG", pasted)
+          replace <- chartr("ATGC", "TACG", pasted)
         }  
       }
     return(replace)    
